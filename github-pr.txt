@@ -12,3 +12,10 @@ Updated the load balancer timeout to align with the application timeout and adde
 so we can detect this earlier next time.
 
 This change is submitted via Pull Request for review to ensure it does not negatively impact performance or cost.
+
+Hello from Rola here, I am your learning partner for this lab from
+Anmute-technologies
+
+Thanks for the detailed investigation and clear root cause analysis — this is well articulated.
+
+I will look to through the file and resolve
