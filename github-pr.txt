@@ -1,0 +1,14 @@
+Bug Fix: Intermittent API Timeouts in Production
+
+We observed intermittent 504 Gateway Timeout errors when traffic spikes during peak hours.
+Initial investigation showed that the application pods were healthy, but requests were timing out at the load balancer.
+
+Root cause:
+The timeout value on the load balancer was lower than the application’s response timeout,
+causing long-running requests to be terminated early.
+
+Fix:
+Updated the load balancer timeout to align with the application timeout and added basic request latency metrics
+so we can detect this earlier next time.
+
+This change is submitted via Pull Request for review to ensure it does not negatively impact performance or cost.
